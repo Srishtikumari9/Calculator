@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="expression_tv_height">80sp</dimen>
+    <dimen name="result_tv_height">100dp</dimen>
+    <dimen name="numbers1">0dp</dimen>
+    <dimen name="numbers2">0dp</dimen>
+    <dimen name="numbers3">0dp</dimen>
+    <dimen name="numbers4">0dp</dimen>
+    <dimen name="operators">0dp</dimen>
+</resources>

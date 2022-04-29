@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <TextView
+        android:id="@+id/tvExpression"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/expression_tv_height"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="right|center"
+        android:padding="16dp"
+        tools:text="2000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/result_tv_height"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="right|center"
+        tools:text="6700"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExpression" />
+
+    <TextView
+        android:id="@+id/tvClear"
+        style="@style/NumberButtonStyle"
+        android:text="@string/clear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/tvResult"
+        app:layout_constraintEnd_toStartOf="@id/tvPercentage"/>
+
+    <TextView
+        android:id="@+id/tvPercentage"
+        style="@style/NumberButtonStyle"
+        android:text="@string/percentage"
+        app:layout_constraintStart_toEndOf="@id/tvClear"
+        app:layout_constraintTop_toTopOf="@+id/tvClear"
+        app:layout_constraintEnd_toStartOf="@id/tvBack"/>
+
+    <TextView
+        android:id="@+id/tvBack"
+        style="@style/NumberButtonStyle"
+        android:text="@string/back"
+        app:layout_constraintStart_toEndOf="@id/tvPercentage"
+        app:layout_constraintTop_toTopOf="@id/tvClear"
+        app:layout_constraintEnd_toStartOf="@id/tvDivide"/>
+
+    <TextView
+        android:id="@+id/tvDivide"
+        style="@style/NumberButtonStyle"
+        android:text="@string/divide"
+        app:layout_constraintStart_toEndOf="@id/tvBack"
+        app:layout_constraintTop_toTopOf="@+id/tvPercentage"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tvSeven"
+        style="@style/NumberButtonStyle"
+        android:text="@string/seven"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/tvClear"
+        app:layout_constraintEnd_toStartOf="@id/tvPercentage"/>
+
+    <TextView
+        android:id="@+id/tvEight"
+        style="@style/NumberButtonStyle"
+        android:text="@string/eight"
+        app:layout_constraintStart_toEndOf="@id/tvSeven"
+        app:layout_constraintTop_toTopOf="@+id/tvSeven"
+        app:layout_constraintEnd_toStartOf="@id/tvNine"/>
+
+    <TextView
+            android:id="@+id/tvNine"
+            style="@style/NumberButtonStyle"
+            android:text="@string/nine"
+            app:layout_constraintStart_toEndOf="@id/tvEight"
+            app:layout_constraintTop_toTopOf="@+id/tvEight"
+            app:layout_constraintEnd_toStartOf="@id/tvDivide"/>
+
+    <TextView
+        android:id="@+id/tvMultiply"
+        style="@style/NumberButtonStyle"
+        android:text="@string/multiply"
+        app:layout_constraintStart_toEndOf="@id/tvNine"
+        app:layout_constraintTop_toTopOf="@+id/tvEight"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvFour"
+        style="@style/NumberButtonStyle"
+        android:text="@string/four"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/tvSeven"
+        app:layout_constraintEnd_toStartOf="@id/tvFive"/>
+
+    <TextView
+        android:id="@+id/tvFive"
+        style="@style/NumberButtonStyle"
+        android:text="@string/five"
+        app:layout_constraintStart_toEndOf="@id/tvFour"
+        app:layout_constraintTop_toTopOf="@+id/tvFour"
+        app:layout_constraintEnd_toStartOf="@id/tvSix"/>
+
+    <TextView
+        android:id="@+id/tvSix"
+        style="@style/NumberButtonStyle"
+        android:text="@string/six"
+        app:layout_constraintStart_toEndOf="@id/tvFive"
+        app:layout_constraintTop_toTopOf="@+id/tvFive"
+        app:layout_constraintEnd_toStartOf="@id/tvDivide"/>
+
+    <TextView
+        android:id="@+id/tvPlus"
+        style="@style/NumberButtonStyle"
+        android:text="@string/plus"
+        app:layout_constraintStart_toEndOf="@id/tvSix"
+        app:layout_constraintTop_toTopOf="@+id/tvSix"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvOne"
+        style="@style/NumberButtonStyle"
+        android:text="@string/one"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/tvFour"
+        app:layout_constraintEnd_toStartOf="@id/tvTwo"/>
+
+    <TextView
+        android:id="@+id/tvTwo"
+        style="@style/NumberButtonStyle"
+        android:text="@string/two"
+        app:layout_constraintStart_toEndOf="@id/tvOne"
+        app:layout_constraintTop_toTopOf="@+id/tvOne"
+        app:layout_constraintEnd_toStartOf="@id/tvThree"/>
+
+    <TextView
+        android:id="@+id/tvThree"
+        style="@style/NumberButtonStyle"
+        android:text="@string/three"
+        app:layout_constraintStart_toEndOf="@id/tvTwo"
+        app:layout_constraintTop_toTopOf="@+id/tvTwo"
+        app:layout_constraintEnd_toStartOf="@id/tvMinus"/>
+
+    <TextView
+        android:id="@+id/tvMinus"
+        style="@style/NumberButtonStyle"
+        android:text="@string/minus"
+        app:layout_constraintStart_toEndOf="@id/tvThree"
+        app:layout_constraintTop_toTopOf="@+id/tvThree"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvZero"
+        style="@style/NumberButtonStyle"
+        android:text="@string/zero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/tvOne"
+        app:layout_constraintEnd_toStartOf="@id/tvDot"/>
+
+    <TextView
+        android:id="@+id/tvDot"
+        style="@style/NumberButtonStyle"
+        android:text="@string/dot"
+        app:layout_constraintStart_toEndOf="@id/tvZero"
+        app:layout_constraintTop_toTopOf="@+id/tvZero"
+        app:layout_constraintEnd_toStartOf="@id/zero_zero"/>
+
+    <TextView
+        android:id="@+id/zero_zero"
+        style="@style/NumberButtonStyle"
+        android:text="@string/zero_zero"
+        app:layout_constraintStart_toEndOf="@id/tvDot"
+        app:layout_constraintTop_toTopOf="@+id/tvDot"
+        app:layout_constraintEnd_toStartOf="@id/equals"/>
+
+    <TextView
+        android:id="@+id/equals"
+        style="@style/NumberButtonStyle"
+        android:text="@string/equals"
+        app:layout_constraintStart_toEndOf="@id/zero_zero"
+        app:layout_constraintTop_toTopOf="@+id/zero_zero"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
